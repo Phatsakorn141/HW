@@ -7,6 +7,7 @@ header {
   width: 100%;
   padding: 10px 20px;
   box-sizing: border-box;
+  animation: slideIn 1s ease-out;
 }
 
 nav ul {
@@ -65,7 +66,7 @@ main {
   background-color: #ffffff;
   padding: 1rem;
   max-width: 800px;
-
+  animation: slideIn 1s ease-out;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -73,13 +74,16 @@ main {
   text-align: start;
 }
 .image {
-    display: block; /* ทำให้ภาพเป็นบล็อก */
-    max-width: 100%; /* จำกัดขนาดภาพไม่เกินความกว้างของจอ */
-    height: auto; /* รักษาอัตราส่วนของภาพ */
-    margin: 0 auto; /* จัดกึ่งกลาง */
-    border: 5px solid #ffcc00; /* เพิ่มกรอบ */
-    border-radius: 10px; /* ทำมุมภาพโค้ง */
+  display: block; /* ทำให้ภาพเป็นบล็อก */
+  max-width: 100%; /* จำกัดขนาดภาพไม่เกินความกว้างของจอ */
+  height: auto; /* รักษาอัตราส่วนของภาพ */
+  margin: 0 auto; /* จัดกึ่งกลาง */
+  border: 5px solid #ffcc00; /* เพิ่มกรอบ */
+  border-radius: 10px; /* ทำมุมภาพโค้ง */
+  animation: slideIn 1s ease-out;
 }
+
+
 p {
   text-indent: 50px;
 }
@@ -221,7 +225,7 @@ p {
     left: 5%;
     right: 5%;
   }
-  main{
+  main {
     max-width: 100%;
   }
   .image {
@@ -241,3 +245,16 @@ body {
   flex-direction: column;
   font-family: prompt, sans-serif;
 }
+@keyframes slideIn {
+    from {
+    transform: translateX(-100%);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0);
+    opacity: 1;
+    }
+   }
+  
+   
+   
