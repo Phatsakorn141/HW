@@ -1,0 +1,32 @@
+header {
+    background: linear-gradient(45deg, #ea3636, #ff5f5f, #ff8c8c);
+    color: #ffffff;
+    display: flex;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* จัดตำแหน่งลิงก์และปุ่ม hamburger อยู่ทางซ้ายและขวา */
+    align-items: center;
+    height: 60px;
+    padding: 0;
+  }
+  
+  nav a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* จัดตำแหน่งข้อความในแนวตั้ง */
+    justify-content: center; /* จัดตำแหน่งข้อความในแนวนอน */
+    line-height: normal; /* ปรับให้ข้อความอยู่ในตำแหน่งที่พอดี */
+    padding: 10px 20px; /* เพิ่มระยะห่างภายใน */
+  }
+  
+  nav a.active {
+    color: #fffb00;
+    font-size: 30px;
+    line-height: normal; /* ปรับความสูงของบรรทัดให้พอดี */
+    text-align: center;
+  }
