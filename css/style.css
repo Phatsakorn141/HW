@@ -83,7 +83,6 @@ main {
   animation: slideIn 1s ease-out;
 }
 
-
 p {
   text-indent: 50px;
 }
@@ -246,15 +245,12 @@ body {
   font-family: prompt, sans-serif;
 }
 @keyframes slideIn {
-    from {
+  from {
     transform: translateX(-100%);
     opacity: 0;
-    }
-    to {
+  }
+  to {
     transform: translateX(0);
     opacity: 1;
-    }
-   }
-  
-   
-   
+  }
+}
