@@ -124,3 +124,6 @@ header {
     left: -150%;
     top: 98%;
   }
+  .wrapper:hover .bar {
+    background-color: white;
+  }
