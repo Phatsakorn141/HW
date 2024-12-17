@@ -127,3 +127,20 @@ header {
   .wrapper:hover .bar {
     background-color: white;
   }
+  /* สไตล์ hamburger icon เมื่อคลิก */
+.wrapper.active .top {
+    transform: rotate(45deg); /* หมุน */
+    top: 40%; /* ตำแหน่งแนวตั้ง */
+    background-color: white;
+  }
+  
+  .wrapper.active .middle {
+    opacity: 0;
+  } /* ซ่อนแถบกลาง */
+  
+  .wrapper.active .bottom {
+    transform: rotate(-45deg); /* หมุน */
+    top: 40%;
+    background-color: white;
+  }
+  
