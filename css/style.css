@@ -78,4 +78,14 @@ header {
   p{
     text-indent: 50px;
   }
+  .special-heading {
+    color: #ff0000; 
+  }
+  .form-container {
+
+    border: 2px solid #ff5f5f; /* กรอบรอบๆ ฟอร์ม */
+    padding: 20px;
+    border-radius: 10px; /* ทำมุมให้โค้ง */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเล็กน้อย */
+  }
   
