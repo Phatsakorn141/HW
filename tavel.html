@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+            <li>
+            <a href="index.html" class="active"><strong>SPK</strong></a>
+            </li>
+            <li><a href="index.html" class="box1-link">Home</a></li>
+            <li><a href="tavel.html" class="box1-link">Tavel</a></li>
+            <li><a href="contact.html" class="box1-link">Contact</a></li>
+            
+          <div class="wrapper" onclick="toggleMenu()">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+        </div>
+
+        <!-- เมนู dropdown -->
+        <div class="menu">
+          <a href="index.html" style="color: black;">Home</a>
+          <a href="tavel.html" style="color: black;">Tavel</a>
+          <a href="contact.html" style="color: black;">Contact</a>
+        
+        </div>
+
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>สถานที่น่าไปของจังหวัดสมุทรปราการ</h1>
+      
+    </main>
+    <footer>
+      
+    </footer>
+    <script>
+        // toggleMenu: แสดง/ซ่อน dropdown menu เมื่อคลิก hamburger icon
+        function toggleMenu() {
+            const wrapper = document.querySelector('.wrapper');
+            const menu = document.querySelector('.menu');
+            
+            wrapper.classList.toggle('active');
+            menu.classList.toggle('show');
+        }</script>
+    
+  </body>
+</html>
