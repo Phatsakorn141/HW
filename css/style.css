@@ -2,6 +2,10 @@ header {
     background: linear-gradient(45deg, #ea3636, #ff5f5f, #ff8c8c);
     color: #ffffff;
     display: flex;
+    width: 100%;         /* ขยายให้เต็มหน้าจอ */
+    margin: 0;           /* เอาค่ามาร์จินออก */
+    padding: 20px;       /* เพิ่ม padding ถ้าต้องการ */
+    box-sizing: border-box; 
   }
   
   nav ul {
@@ -27,7 +31,7 @@ header {
   
   nav a.active {
     color: #fffb00;
-    font-size: 30px;
+    font-size: 60px;
     line-height: normal; /* ปรับความสูงของบรรทัดให้พอดี */
     text-align: center;
   }
@@ -42,6 +46,7 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
       box-shadow 0.3s ease;
     text-align: center;
+    font-size: 20px;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -61,3 +66,16 @@ header {
     max-width: 800px;
     margin: 0 auto;
   }
+  .number {
+    text-align: start;
+  }
+  .image {
+    height: 500px;
+    width: 10;
+    border: 5px solid rgb(255, 204, 0);
+    border-radius: 10px;
+  }
+  p{
+    text-indent: 50px;
+  }
+  
