@@ -2,19 +2,21 @@ header {
   background: linear-gradient(45deg, #ea3636, #ff5f5f, #ff8c8c);
   color: #ffffff;
   display: flex;
-  width: 100%; /* ขยายให้เต็มหน้าจอ */
-  margin: 0; /* เอาค่ามาร์จินออก */
-  padding: 20px; /* เพิ่ม padding ถ้าต้องการ */
+  justify-content: space-between; /* กระจายเนื้อหาภายใน header */
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
   box-sizing: border-box;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  justify-content: space-between; /* จัดตำแหน่งลิงก์และปุ่ม hamburger อยู่ทางซ้ายและขวา */
+  justify-content: space-around;
   align-items: center;
-  height: 60px;
+  flex-wrap: wrap; /* ให้รองรับการพับลงเมื่อจอเล็ก */
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 nav a {
@@ -57,22 +59,26 @@ nav a.active {
 }
 main {
   font-family: "Arial", sans-serif;
-  font-size: 25px;
-  line-height: 1;
+  font-size: 18px;
+  line-height: 1.6;
   color: #2e2e2e;
   background-color: #ffffff;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 800px;
+
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .number {
   text-align: start;
 }
 .image {
-  height: 500px;
-  width: 10;
-  border: 5px solid rgb(255, 204, 0);
-  border-radius: 10px;
+    display: block; /* ทำให้ภาพเป็นบล็อก */
+    max-width: 100%; /* จำกัดขนาดภาพไม่เกินความกว้างของจอ */
+    height: auto; /* รักษาอัตราส่วนของภาพ */
+    margin: 0 auto; /* จัดกึ่งกลาง */
+    border: 5px solid #ffcc00; /* เพิ่มกรอบ */
+    border-radius: 10px; /* ทำมุมภาพโค้ง */
 }
 p {
   text-indent: 50px;
@@ -95,7 +101,8 @@ p {
   border-radius: 10%; /* มุมโค้งมน */
   position: relative; /* ตั้งตำแหน่งให้ใช้งานกับ absolute ได้ */
   cursor: pointer; /* เปลี่ยน cursor เมื่อ hover */
-  display: block;
+  display: none;
+  z-index: 1001;
 }
 .bar {
   width: 35px; /* ความกว้าง */
@@ -142,24 +149,24 @@ p {
   background-color: white;
 }
 .menu {
-    position: fixed; /* ตำแหน่งคงที่ */
-    height: auto;
-    width: 200px;
-    top: 60px; /* ปรับตำแหน่งให้อยู่ด้านล่าง hamburger icon */
-    left: 20px; /* ระยะห่างจากขอบซ้าย */
-    z-index: 1000; /* ให้อยู่เหนือองค์ประกอบอื่นๆ */
-    display: none; /* ซ่อน */
-    background-color: #ffffff;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  max-width: 300px; /* จำกัดความกว้างเมนู */
+  margin: 0 auto; /* จัดให้อยู่กึ่งกลางหน้าจอ */
+  background-color: #ffffff;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* ซ่อนเมนู */
 }
 .menu.show {
   display: block;
 }
 /* สํ
-าหรับแท็บเล็ต */
+  าหรับแท็บเล็ต */
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -182,9 +189,14 @@ p {
     display: block;
     margin-left: 500px;
   }
+  .menu {
+    top: 50px;
+    left: 10px;
+    right: 10px;
+  }
 }
 /* สํ
-   าหรับมือถือ */
+     าหรับมือถือ */
 @media (max-width: 480px) {
   .gallery {
     grid-template-columns: 1fr;
@@ -203,6 +215,17 @@ p {
   .wrapper {
     display: block;
     margin-left: 120px;
+  }
+  .menu {
+    max-width: 90%; /* ใช้เกือบเต็มจอมือถือ */
+    left: 5%;
+    right: 5%;
+  }
+  main{
+    max-width: 100%;
+  }
+  .image {
+    max-width: 90%; /* ลดขนาดภาพให้พอดีกับมือถือ */
   }
 }
 html,
