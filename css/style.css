@@ -88,4 +88,39 @@ header {
     border-radius: 10px; /* ทำมุมให้โค้ง */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเล็กน้อย */
   }
+  .wrapper {
+    width: 20px; /* ความกว้าง */
+    height: 20px; /* ความสูง */
+    margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
+    margin-left: 500px;
+    margin-top: -1px; /* ระยะห่างด้านบน */
+    border-radius: 10%; /* มุมโค้งมน */
+    position: relative; /* ตั้งตำแหน่งให้ใช้งานกับ absolute ได้ */
+    cursor: pointer; /* เปลี่ยน cursor เมื่อ hover */
+    display: block;
+  }
+  .bar {
+    width: 35px; /* ความกว้าง */
+    height: 8px; /* ความสูง */
+    border: 2px solid rgb(255, 255, 255); /* ขอบสีขาว */
+    position: absolute; /* ตำแหน่ง absolute ภายใน wrapper */
+    border-radius: 10px; /* มุมโค้งมน */
+    transition: all 0.5s; /* ตั้ง transition */
+    background-color: transparent; /* พื้นหลังโปร่งใส */
+  }
   
+  /* ตำแหน่งแถบด้านบน */
+  .top {
+    left: -150%;
+    top: -25%;
+  }
+  /* ตำแหน่งแถบตรงกลาง */
+  .middle {
+    left: -150%;
+    top: 36%;
+  }
+  /* ตำแหน่งแถบล่าง */
+  .bottom {
+    left: -150%;
+    top: 98%;
+  }
